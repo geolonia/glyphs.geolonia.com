@@ -1,0 +1,23 @@
+{
+  "name": "glyphs.tilecloud.io",
+  "version": "1.0.0",
+  "description": "``` https://glyphs.tilecloud.io/{fontstack}/{range}.pbf ```",
+  "main": "index.js",
+  "scripts": {
+    "build": "bash bin/build.sh",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tilecloud/glyphs.tilecloud.io.git"
+  },
+  "author": "",
+  "license": "SIL OPEN FONT LICENSE Version 1.1",
+  "bugs": {
+    "url": "https://github.com/tilecloud/glyphs.tilecloud.io/issues"
+  },
+  "homepage": "https://github.com/tilecloud/glyphs.tilecloud.io#readme",
+  "dependencies": {
+    "fontnik": "^0.5.1"
+  }
+}
