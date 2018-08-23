@@ -27,7 +27,8 @@ https://glyphs.tilecloud.io/{fontstack}/{range}.pbf
 
 ```
 $ npm install
-$ npm run build
+$ npm run build-font # フォントをビルド
+$ npm run build-html # HTML ページをビルド
 ```
 
 プルリクエストや Issue はいつでも歓迎します。
