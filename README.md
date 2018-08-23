@@ -23,6 +23,25 @@ https://glyphs.tilecloud.io/{fontstack}/{range}.pbf
 
 便宜上の問題により、`Noto Sans Regular` は `Noto Sans CJK JP Regular` のエイリアスで、日本語のフォントも含まれます。
 
+## Mapbox GL JS における日本語の表示について
+
+現実的には、`mapboxgl.Map()` で以下のように指定することで、日本語が含まれないフォントを指定しても日本語が表示されます。
+
+```
+const map = new mapboxgl.Map({
+  container: 'map',
+  style: './style.json',
+  attributionControl: true,
+  hash: true,
+  localIdeographFontFamily: ['sans-serif'] // 日本語を表示するための設定
+});
+```
+
+この方法は、日本語フォントをダウンロードしないため、表示速度がはやくなりますので、この設定を入れておくことをおすすめします。
+ただし、[Maputnik](https://maputnik.github.io/) でスタイルのカスタマイズをする際に、Maputnikに上述の設定が入っていないため日本語が表示されません。
+
+したがって、念の為程度にこのサイトで提供している日本語フォントを設定しておくと良いかもしれません。
+
 ## ビルド
 
 ```
