@@ -8,7 +8,7 @@
 https://glyphs.tilecloud.io/{fontstack}/{range}.pbf
 ```
 
-ドキュメント: https://www.mapbox.com/mapbox-gl-js/style-spec/#root-glyphs
+ドキュメント: [https://www.mapbox.com/mapbox-gl-js/style-spec/#root-glyphs](https://www.mapbox.com/mapbox-gl-js/style-spec/#root-glyphs)
 
 ## フォントについて
 
@@ -33,7 +33,7 @@ $ npm run build-html # HTML ページをビルド
 
 プルリクエストや Issue はいつでも歓迎します。
 
-https://github.com/tilecloud/glyphs.tilecloud.io
+[https://github.com/tilecloud/glyphs.tilecloud.io](https://github.com/tilecloud/glyphs.tilecloud.io)
 
 ## 免責事項
 
