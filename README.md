@@ -1,8 +1,20 @@
 # glyphs.tilecloud.io
 
+This is a repository of the fontstack server for styles for Mapbox GL JS.
+All fontstacks in this repository contains CJK characters.
+
 ```
 https://glyphs.tilecloud.io/{fontstack}/{range}.pbf
 ```
+
+## Fontstacks
+
+* Noto Sans CJK JP Bold
+* Noto Sans CJK JP Light
+* Noto Sans CJK JP Regular
+* Noto Sans Regular
+
+`Noto Sans Regular` is alias with the `Noto Sans CJK JP Regular`.
 
 ## How to build
 
