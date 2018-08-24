@@ -21,7 +21,8 @@ https://glyphs.tilecloud.io/{fontstack}/{range}.pbf
 
 `style.json` で `text-font: ['Noto Sans CJK JP Regular']` のようにご利用ください。
 
-便宜上の問題により、`Noto Sans Regular` は `Noto Sans CJK JP Regular` のエイリアスで、日本語のフォントも含まれます。
+* 便宜上の問題により、`Noto Sans Regular` は `Noto Sans CJK JP Regular` のエイリアスで、日本語のフォントも含まれます。
+* 本サーバーはスタティックなホスティングのため `['Noto Sans CJK JP Regular', 'Noto Sans CJK JP Light']` のように複数指定された場合には、404 のエラーを返します。
 
 ## Mapbox GL JS における日本語の表示について
 

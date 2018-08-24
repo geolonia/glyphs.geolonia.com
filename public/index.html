@@ -78,7 +78,23 @@
 <li>Noto Sans Regular</li>
 </ul>
 <p><code>style.json</code> で <code>text-font: ['Noto Sans CJK JP Regular']</code> のようにご利用ください。</p>
-<p>便宜上の問題により、<code>Noto Sans Regular</code> は <code>Noto Sans CJK JP Regular</code> のエイリアスで、日本語のフォントも含まれます。</p>
+<ul>
+<li>便宜上の問題により、<code>Noto Sans Regular</code> は <code>Noto Sans CJK JP Regular</code> のエイリアスで、日本語のフォントも含まれます。</li>
+<li>本サーバーはスタティックなホスティングのため <code>['Noto Sans CJK JP Regular', 'Noto Sans CJK JP Light']</code> のように複数指定された場合には、404 のエラーを返します。</li>
+</ul>
+<h2 id="mapboxgljs">Mapbox GL JS における日本語の表示について</h2>
+<p>現実的には、<code>mapboxgl.Map()</code> で以下のように指定することで、日本語が含まれないフォントを指定しても日本語が表示されます。</p>
+<pre><code>const map = new mapboxgl.Map({
+  container: 'map',
+  style: './style.json',
+  attributionControl: true,
+  hash: true,
+  localIdeographFontFamily: ['sans-serif'] // 日本語を表示するための設定
+});
+</code></pre>
+<p>この方法は、日本語フォントをダウンロードしないため、表示速度がはやくなりますので、この設定を入れておくことをおすすめします。
+ただし、<a href="https://maputnik.github.io/">Maputnik</a> でスタイルのカスタマイズをする際に、Maputnikに上述の設定が入っていないため日本語が表示されません。</p>
+<p>したがって、念の為程度にこのサイトで提供している日本語フォントを設定しておくと良いかもしれません。</p>
 <h2 id="-1">ビルド</h2>
 <pre><code>$ npm install
 $ npm run build-font # フォントをビルド
