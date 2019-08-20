@@ -1,0 +1,7 @@
+# These rules will change if you change your site’s custom domains or HTTPS settings
+
+# Redirect domain aliases to primary domain
+https://glyphs.tilecloud.io/* https://glyphs.geolonia.com/:splat 301!
+
+# Optional: Redirect default Netlify subdomain to primary domain
+https://geolonia-glyphs.netlify.com/* https://glyphs.geolonia.com/:splat 301!
