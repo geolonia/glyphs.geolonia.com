@@ -1,23 +1,23 @@
 {
-  "name": "glyphs.tilecloud.io",
+  "name": "glyphs.geolonia.com",
   "version": "1.0.0",
-  "description": "``` https://glyphs.tilecloud.io/{fontstack}/{range}.pbf ```",
+  "description": "``` https://glyphs.geolonia.com/{fontstack}/{range}.pbf ```",
   "main": "index.js",
   "scripts": {
-    "build-html": "mdhtml README.md -t https://raw.githubusercontent.com/tilecloud/md-template/master/template.html -o public/index.html",
+    "build-html": "mdhtml README.md -t https://raw.githubusercontent.com/geolonia/md-template/master/template.html -o public/index.html",
     "build-font": "bash bin/build.sh",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/tilecloud/glyphs.tilecloud.io.git"
+    "url": "git+https://github.com/geolonia/glyphs.geolonia.com.git"
   },
   "author": "",
   "license": "SIL OPEN FONT LICENSE Version 1.1",
   "bugs": {
-    "url": "https://github.com/tilecloud/glyphs.tilecloud.io/issues"
+    "url": "https://github.com/geolonia/glyphs.geolonia.com/issues"
   },
-  "homepage": "https://github.com/tilecloud/glyphs.tilecloud.io#readme",
+  "homepage": "https://github.com/geolonia/glyphs.geolonia.com#readme",
   "devDependencies": {
     "@tilecloud/mdhtml": "^0.2.0",
     "fontnik": "^0.5.1",

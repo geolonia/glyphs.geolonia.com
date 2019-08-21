@@ -1,11 +1,11 @@
-# glyphs.tilecloud.io
+# glyphs.geolonia.com
 
 このサーバーは、Mapbox GL JS で日本語を表示するためのフォントサーバーです。
 
 `style.json` の `glyphs` の値に以下の URL を指定することで利用可能です。
 
 ```
-https://glyphs.tilecloud.io/{fontstack}/{range}.pbf
+https://glyphs.geolonia.com/{fontstack}/{range}.pbf
 ```
 
 ドキュメント: [https://www.mapbox.com/mapbox-gl-js/style-spec/#root-glyphs](https://www.mapbox.com/mapbox-gl-js/style-spec/#root-glyphs)
@@ -53,7 +53,7 @@ $ npm run build-html # HTML ページをビルド
 
 プルリクエストや Issue はいつでも歓迎します。
 
-[https://github.com/tilecloud/glyphs.tilecloud.io](https://github.com/tilecloud/glyphs.tilecloud.io)
+[https://github.com/geolonia/glyphs.geolonia.com](https://github.com/geolonia/glyphs.geolonia.com)
 
 ## 免責事項
 
