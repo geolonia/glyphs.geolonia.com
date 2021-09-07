@@ -20,7 +20,7 @@
   "homepage": "https://github.com/geolonia/glyphs.geolonia.com#readme",
   "devDependencies": {
     "@tilecloud/mdhtml": "^0.2.0",
-    "fontnik": "^0.5.1",
+    "fontnik": "^0.6.0",
     "jsdom": "^12.0.0",
     "showdown": "^1.9.1"
   }
