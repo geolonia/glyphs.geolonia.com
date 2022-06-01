@@ -21,7 +21,7 @@ https://glyphs.geolonia.com/{fontstack}/{range}.pbf
 
 `style.json` で `text-font: ['Noto Sans CJK JP Regular']` のようにご利用ください。
 
-* `Noto Sans Regular` は 各国の文字に対応するために、 [GoNotoCurrent.ttf](https://github.com/satbyy/go-noto-universal/releases/tag/v5.1#:~:text=26%20days%20ago-,GoNotoCurrent.ttf,-14.1%20MB) を使用しており、80種類以上のフォントを含みます。（詳細については、[go-noto-universal](https://github.com/satbyy/go-noto-universal) を参照ください）
+* `Noto Sans Regular` は 各国の文字に対応するために、 [GoNotoCurrent.ttf](https://github.com/satbyy/go-noto-universal/releases/tag/v5.1#:~:text=26%20days%20ago-,GoNotoCurrent.ttf,-14.1%20MB)（詳細については、[go-noto-universal](https://github.com/satbyy/go-noto-universal) を参照ください）と Noto Sans CJK JP Regular の ハングル `U+AC00 to U+D7FF` を使用しており、80種類以上のフォントを含みます。
 * 本サーバーはスタティックなホスティングのため `['Noto Sans CJK JP Regular', 'Noto Sans CJK JP Light']` のように複数指定された場合には、404 のエラーを返します。
 
 ## Mapbox GL JS における日本語の表示について
