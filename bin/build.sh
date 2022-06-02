@@ -6,7 +6,7 @@ rm -fr .cache
 mkdir -p .cache
 
 curl https://noto-website-2.storage.googleapis.com/pkgs/NotoSansCJKjp-hinted.zip -o .cache/NotoSansCJKjp.zip
-curl -L https://github.com/geolonia/go-noto-universal/releases/download/v5.1-geolonia/GoNotoCurrent.ttf -o .cache/GoNotoCurrent.ttf
+curl -L https://github.com/geolonia/go-noto-universal/releases/download/5.1-geolonia-v1/GoNotoCurrent.ttf -o .cache/GoNotoCurrent.ttf
 
 unzip .cache/NotoSansCJKjp.zip -d .cache/
 
