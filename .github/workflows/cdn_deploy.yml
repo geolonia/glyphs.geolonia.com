@@ -1,0 +1,35 @@
+name: Deploy to CDN
+
+on:
+  push:
+    branches:
+      - master
+      - cdnv2
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    # These permissions are needed to interact with GitHub's OIDC Token endpoint.
+    permissions:
+      id-token: write
+      contents: read
+
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+
+      - name: Restore timestamps
+        uses: chetan/git-restore-mtime-action@v1
+
+      - name: Configure AWS Credentials
+        uses: aws-actions/configure-aws-credentials@v1
+        with:
+          aws-region: ap-northeast-1
+          role-to-assume: arn:aws:iam::762706324393:role/github-actions-cdn-geolonia-deploy
+
+      - name: Deploy to S3
+        run: |
+          aws s3 sync ./public s3://gl-glyphs-ap-northeast-1 --delete --cache-control public,max-age=3600 --exclude "_headers" --exclude "*.pbf"
+          aws s3 sync ./public s3://gl-glyphs-ap-northeast-1 --delete --cache-control public,max-age=31536000 --content-type "application/protobuf" --exclude="*" --include="*.pbf"
