@@ -13,11 +13,13 @@ unzip .cache/NotoSansCJKjp.zip -d .cache/
 mkdir -p "public/Noto Sans CJK JP Bold"
 $(npm bin)/build-glyphs .cache/NotoSansCJKjp-Bold.otf "public/Noto Sans CJK JP Bold"
 
-mkdir -p "public/Noto Sans CJK JP Light"
-$(npm bin)/build-glyphs .cache/NotoSansCJKjp-Light.otf "public/Noto Sans CJK JP Light"
-
 mkdir -p "public/Noto Sans CJK JP Regular"
 $(npm bin)/build-glyphs .cache/NotoSansCJKjp-Regular.otf "public/Noto Sans CJK JP Regular"
 
-mkdir -p "public/Noto Sans Regular"
-$(npm bin)/build-glyphs .cache/GoNotoCurrent.ttf "public/Noto Sans Regular"
+mkdir -p "public/Noto Sans CJK JP Light"
+$(npm bin)/build-glyphs .cache/NotoSansCJKjp-Light.otf "public/Noto Sans CJK JP Light"
+
+mkdir -p "public/Noto Sans Universal Regular"
+$(npm bin)/build-glyphs .cache/GoNotoCurrent.ttf "public/Noto Sans Universal Regular"
+
+rm -fr "public/Noto Sans Regular" && cp -fr "public/Noto Sans CJK JP Regular" "public/Noto Sans Regular"
