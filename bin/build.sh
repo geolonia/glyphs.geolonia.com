@@ -5,10 +5,10 @@ set -ex
 rm -fr .cache
 mkdir -p .cache
 
-curl https://noto-website-2.storage.googleapis.com/pkgs/NotoSansCJKjp-hinted.zip -o .cache/NotoSansCJKjp.zip
+curl https://noto-website-2.storage.googleapis.com/pkgs/NotoSansCJKjp-hinted.zip -o .cache/font.zip
 curl -L https://github.com/geolonia/go-noto-universal/releases/download/5.1-geolonia-v1/GoNotoCurrent.ttf -o .cache/GoNotoCurrent.ttf
 
-unzip .cache/NotoSansCJKjp.zip -d .cache/
+unzip .cache/font.zip -d .cache/
 
 mkdir -p "public/Noto Sans CJK JP Bold"
 $(npm bin)/build-glyphs .cache/NotoSansCJKjp-Bold.otf "public/Noto Sans CJK JP Bold"
