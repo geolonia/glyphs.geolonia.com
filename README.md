@@ -1,6 +1,6 @@
 # glyphs.geolonia.com
 
-このサーバーは、Mapbox GL JS で日本語を表示するためのフォントサーバーです。
+このサーバーは、 Geolonia Maps または MapLibre GL JS で日本語を表示するためのフォントサーバーです。
 
 `style.json` の `glyphs` の値に以下の URL を指定することで利用可能です。
 
@@ -8,7 +8,7 @@
 https://glyphs.geolonia.com/{fontstack}/{range}.pbf
 ```
 
-ドキュメント: [https://www.mapbox.com/mapbox-gl-js/style-spec/#root-glyphs](https://www.mapbox.com/mapbox-gl-js/style-spec/#root-glyphs)
+ドキュメント: [https://maplibre.org/maplibre-gl-js-docs/style-spec/root/#glyphs](https://maplibre.org/maplibre-gl-js-docs/style-spec/root/#glyphs)
 
 ## フォントについて
 
@@ -26,12 +26,12 @@ https://glyphs.geolonia.com/{fontstack}/{range}.pbf
 * `Noto Sans Universal Regular` は 各国の文字に対応するために、 [GoNotoCurrent.ttf](https://github.com/satbyy/go-noto-universal/releases/tag/v5.1#:~:text=26%20days%20ago-,GoNotoCurrent.ttf,-14.1%20MB)（詳細については、[go-noto-universal](https://github.com/satbyy/go-noto-universal) を参照ください）と Noto Sans CJK JP Regular の ハングル `U+AC00 to U+D7FF` を使用しており、80種類以上のフォントを含みます。
 * 本サーバーはスタティックなホスティングのため `['Noto Sans CJK JP Regular', 'Noto Sans CJK JP Light']` のように複数指定された場合には、404 のエラーを返します。
 
-## Mapbox GL JS における日本語の表示について
+## MapLibre GL JS における日本語の表示について
 
-現実的には、`mapboxgl.Map()` で以下のように指定することで、日本語が含まれないフォントを指定しても日本語が表示されます。
+現実的には、`maplibregl.Map()` で以下のように指定することで、日本語が含まれないフォントを指定しても日本語が表示されます。
 
 ```
-const map = new mapboxgl.Map({
+const map = new maplibregl.Map({
   container: 'map',
   style: './style.json',
   attributionControl: true,
@@ -45,7 +45,22 @@ const map = new mapboxgl.Map({
 
 したがって、念の為程度にこのサイトで提供している日本語フォントを設定しておくと良いかもしれません。
 
+## カスタマイズ
+
+MapLibre GL / Geolonia Maps で標準ではないフォントを使う場合は、このレポジトリーを複製し、 `build.sh` に下記のような記述を追加してください。
+
+```
+mkdir -p "public/XYZ"
+$(npm bin)/build-glyphs "XYZへのパス.ttf" "public/XYZ"
+```
+
+`XYZ` をフォント名と置き換えてください。このツールは OTF または TTF しか対応していないので、 WOFF などの他のフォーマットを利用する場合は先に変換してください。
+
+`public` に入っているディレクトリをHTTPサーバーにアップロードすると、 [style.json に指定すると使えるようになります](https://maplibre.org/maplibre-gl-js-docs/style-spec/root/#glyphs)。
+
 ## ビルド
+
+[`node-fontnik`](https://github.com/mapbox/node-fontnik) を使ってTTF/OTFファイルを変換します。 nodejs v12 をお勧めします。
 
 ```
 $ npm install
