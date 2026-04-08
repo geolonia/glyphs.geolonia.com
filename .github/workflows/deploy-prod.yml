@@ -18,6 +18,11 @@ jobs:
         with:
           fetch-depth: 0
 
+      - name: Ensure tagged commit is on master
+        run: |
+          git fetch origin master --depth=1
+          git merge-base --is-ancestor "$GITHUB_SHA" origin/master
+
       - name: Restore timestamps
         uses: chetan/git-restore-mtime-action@v1
 
