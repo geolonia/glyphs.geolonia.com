@@ -56,7 +56,7 @@ $(npm bin)/build-glyphs "XYZへのパス.ttf" "public/XYZ"
 
 `XYZ` をフォント名と置き換えてください。このツールは OTF または TTF しか対応していないので、 WOFF などの他のフォーマットを利用する場合は先に変換してください。
 
-`public` に入っているディレクトリをHTTPサーバーにアップロードすると、 [style.json に指定すると使えるようになります](https://maplibre.org/maplibre-gl-js-docs/style-spec/root/#glyphs)。
+`public` に入っているディレクトリをHTTPサーバーにアップロードして [style.json に指定すると使えるようになります](https://maplibre.org/maplibre-gl-js-docs/style-spec/root/#glyphs)。
 
 ## ビルド
 
