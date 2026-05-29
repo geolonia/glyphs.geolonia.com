@@ -27,6 +27,19 @@ jobs:
           aws-region: ap-northeast-1
           role-to-assume: arn:aws:iam::762706324393:role/github-actions-cdn-geolonia-deploy
 
+      - name: Configure S3 CORS
+        run: |
+          aws s3api put-bucket-cors --bucket gl-glyphs-ap-northeast-1-dev --cors-configuration '{
+            "CORSRules": [
+              {
+                "AllowedOrigins": ["*"],
+                "AllowedMethods": ["GET", "HEAD"],
+                "AllowedHeaders": ["*"],
+                "MaxAgeSeconds": 86400
+              }
+            ]
+          }'
+
       - name: Deploy to S3
         run: |
           aws s3 sync ./public s3://gl-glyphs-ap-northeast-1-dev --delete --cache-control public,max-age=3600 --exclude "_headers" --exclude "*.pbf"
